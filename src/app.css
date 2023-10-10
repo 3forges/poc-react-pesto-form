@@ -20,6 +20,10 @@
   padding: 2em;
 }
 
+.card.form {
+  padding: 2em;
+  background-color: #d0c1edaa;
+}
 .read-the-docs {
   color: #888;
 }

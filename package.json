@@ -9,10 +9,26 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "preact": "^10.16.0"
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.14.12",
+    "@mui/material": "^5.14.12",
+    "@mui/styled-engine-sc": "^5.14.12",
+    "@mui/x-tree-view": "6.0.0-beta.0",
+    "@preact/compat": "^17.1.2",
+    "lodash": "^4.17.21",
+    "lucide-preact": "^0.284.0",
+    "preact": "^10.16.0",
+    "prop-types": "^15.8.1",
+    "react": "npm:@preact/compat",
+    "react-dom": "npm:@preact/compat",
+    "styled-components": "^6.0.8"
   },
   "devDependencies": {
+    "@mui/types": "^7.2.5",
     "@preact/preset-vite": "^2.5.0",
+    "@types/lodash": "^4.14.199",
+    "@types/prop-types": "^15.7.8",
     "typescript": "^5.0.2",
     "vite": "^4.4.5"
   }

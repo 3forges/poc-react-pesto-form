@@ -1,0 +1,29 @@
+import * as React from 'react';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import { TreeView } from '@mui/x-tree-view/TreeView';
+import { TreeItem } from '@mui/x-tree-view/TreeItem';
+
+export default function PestoMuiTree() {
+  return (
+    <TreeView
+      aria-label="file system navigator"
+      defaultCollapseIcon={<ExpandMoreIcon />}
+      defaultExpandIcon={<ChevronRightIcon />}
+      sx={{ height: 240, flexGrow: 1, maxWidth: 400, overflowY: 'auto' }}
+    >
+      <TreeItem nodeId="1" label="title">
+        <TreeItem nodeId="2" label="string" />
+      </TreeItem>
+      <TreeItem nodeId="1" label="price">
+        <TreeItem nodeId="2" label="number" />
+      </TreeItem>
+      <TreeItem nodeId="5" label="Documents">
+        <TreeItem nodeId="10" label="OSS" />
+        <TreeItem nodeId="6" label="MUI">
+          <TreeItem nodeId="8" label="index.js" />
+        </TreeItem>
+      </TreeItem>
+    </TreeView>
+  );
+}

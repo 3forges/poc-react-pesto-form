@@ -3,6 +3,8 @@ import preactLogo from './assets/preact.svg'
 import viteLogo from '/vite.svg'
 import './app.css'
 
+import PestoForm from './components/form/PestoForm'
+
 export function App() {
   const [count, setCount] = useState(0)
 
@@ -28,6 +30,9 @@ export function App() {
       <p class="read-the-docs">
         Click on the Vite and Preact logos to learn more
       </p>
+      <div class="card form">
+      <PestoForm />
+      </div>
     </>
   )
 }
