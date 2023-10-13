@@ -1,20 +1,17 @@
 import { useState } from "preact/hooks";
-import React, { ReactNode } from "preact/compat";
-import ReactDOM from "preact/compat";// import the react-json-view component
-
-import './PestoTwTree.module.css'
+import { JsonViewer } from '@textea/json-viewer'
 
 // import the react-json-view component
 import ReactJson from 'react-json-view'
 
 // import {Theme} from 'react-base16-styling'
-export interface PestoTwTreeProps {
+export interface PestoOmyTreeProps {
     name: string;
     jsonTree: any;
 }
 
-export default function PestoTwTree(props: PestoTwTreeProps) {
-    const [jsonTreeState, setJsonTreeState] = useState<any>(props.jsonTree);
+export default function PestoOmyTree(props: PestoOmyTreeProps) {
+    const [jsonTreeState, setJsonTreeState] = useState<PestoOmyTreeProps>(props.jsonTree);
     const theme = {
         base00: '#272822',
         base01: '#383830',
@@ -59,33 +56,20 @@ export default function PestoTwTree(props: PestoTwTreeProps) {
 
     const handleTexareaBlur = ({ target: { value } }: any) => {
         const { name } = props
-        console.log(` - [+] props.name = [${name}]`)
+        console.log(`name = [${name}]`)
         setJsonTreeState({
-            ...value
-        })
-        /*
-        setJsonTreeState({
-            jsonTree: updatedSrc,
+            jsonTree: value,
             name: name
         })
-        */
 
     }
 
     const handleChanges = ({ updated_src: updatedSrc }: any) => {
         const { name } = props
-        /**
-         * 
-         */
-        setJsonTreeState({
-            ...updatedSrc
-        })
-        /*
         setJsonTreeState({
             jsonTree: updatedSrc,
             name: name
         })
-        */
     }
 
     return (
@@ -100,17 +84,7 @@ export default function PestoTwTree(props: PestoTwTreeProps) {
             }
             {//<ReactJson src={jsonTreeState} />
             }
-            <div className={`content-normal text-left`}>
-                <ReactJson src={jsonTreeState}
-                    theme="ocean"
-                    iconStyle="triangle"
-                    indentWidth="2"
-                    displayObjectSize={false}
-                    displayDataTypes={false}
-                    onEdit={handleChanges}
-                    onAdd={handleChanges}
-                    onDelete={handleChanges} />
-            </div>
+            <JsonViewer editable={true} value={jsonTreeState} />
 
             <ul class="divide-y divide-gray-300 max-w-sm mt-16 mx-auto px-4 border">
 
