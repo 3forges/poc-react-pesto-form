@@ -72,11 +72,48 @@ export default function PestoTwTree(props: PestoTwTreeProps) {
 
     }
 
-    const handleChanges = ({ updated_src: updatedSrc }: any) => {
-        const { name } = props
+    /*****************************
+     * passed object will actually be :
+     * ***************************
+     * {
+     *     updated_src: src, //new src value
+     *     name: name, //new var name
+     *     namespace: namespace, //list, namespace indicating var location
+     *     new_value: new_value, //new variable value
+     *     existing_value: existing_value, //existing variable value
+     * }
+    */
+    const handleChanges = ({ 
+        updated_src: updatedSrc, //new src value
+        name: name, //new var name
+        namespace: namespace, //list, namespace indicating var location
+        new_value: new_value, //new variable value
+        existing_value: existing_value, //existing variable value
+    }: any) => {
         /**
          * 
          */
+        console.log(`//------------------------------------------- `)
+        console.log(`//------------------------------------------- `)
+        console.log(`//---  handleChanges : `)
+        console.log(`//------------------------------------------- `)
+        console.log(`//------------------------------------------- `)
+        console.log(`//------------------------------------------- `)
+        console.log(`//---  updated_src: updatedSrc, //new src value `)
+        console.log(`//---  name: name, //new var name `)
+        console.log(`//---  namespace: namespace, //list, namespace indicating var location `)
+        console.log(`//---  new_value: new_value, //new variable value `)
+        console.log(`//---  existing_value: existing_value, //existing variable value `)
+        console.log(`//------------------------------------------- `)
+        console.log(`//------------------------------------------- `)
+        console.log({
+            updated_src: updatedSrc, //new src value
+            name: name, //new var name
+            namespace: namespace, //list, namespace indicating var location
+            new_value: new_value, //new variable value
+            existing_value: existing_value, //existing variable value
+        })
+
         setJsonTreeState({
             ...updatedSrc
         })
