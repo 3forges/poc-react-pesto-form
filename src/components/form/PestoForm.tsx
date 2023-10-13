@@ -21,7 +21,36 @@ export default class PestoForm extends Component {
             <PestoMuiTree />
           </div>
           <div class="">
-          <PestoTwTree name={`bernard`} />
+          <PestoTwTree name={`bernard`} jsonTree={{
+        name: "string",
+        Diplomes: [
+            {
+                designation: "maitrise",
+                description: "Ceci est un diplôme de Maîtrise",
+                eecole: "Université Paris 6 Pierre & Marie Curie"
+            },
+            {
+                designation: "maitrise",
+                description: "Ceci est un diplôme de Maîtrise",
+                eecole: "Université Paris 6 Pierre & Marie Curie"
+            },
+            {
+                designation: "maitrise",
+                description: "Ceci est un diplôme de Maîtrise",
+                eecole: "Université Paris 6 Pierre & Marie Curie"
+            },
+            {
+                designation: "maitrise",
+                description: "Ceci est un diplôme de Maîtrise",
+                eecole: "Université Paris 6 Pierre & Marie Curie"
+            },
+            {
+                designation: "maitrise",
+                description: "Ceci est un diplôme de Maîtrise",
+                eecole: "Université Paris 6 Pierre & Marie Curie"
+            },
+        ]
+    }} />
           </div>
           <input type="text" value={value} onInput={this.onInput} />
           <p>You typed this value: {value}</p>
