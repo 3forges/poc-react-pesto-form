@@ -3,7 +3,7 @@ import PestoMuiTree from './PestoMuiTree'
 import PestoTwTree from "./PestoTwTree";
 import PestoOmyTree from './PestoOmyTree'
 import PestoOmyTreeFull from "./PestoOmyTreeFull";
-
+import PestoJsToYaml from './../convert/PestoJsToYaml'
 /**
  * Ok so this [initJsonTree], must be
  * constructed from the [JSON Schema]
@@ -74,6 +74,12 @@ export default class PestoForm extends Component {
 
 
           </div>
+
+          <div>
+          <PestoJsToYaml />
+
+          </div>
+
           <input type="text" value={value} onInput={this.onInput} />
           <p>You typed this value: {value}</p>
           <button type="submit">Submit</button>

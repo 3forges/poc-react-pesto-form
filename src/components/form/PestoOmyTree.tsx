@@ -84,7 +84,7 @@ export default function PestoOmyTree(props: PestoOmyTreeProps) {
             }
             {//<ReactJson src={jsonTreeState} />
             }
-            <JsonViewer editable={true} value={jsonTreeState} />
+            <JsonViewer enableClipboard={true} displayDataTypes={true} editable={true} value={jsonTreeState} />
 
             <ul class="divide-y divide-gray-300 max-w-sm mt-16 mx-auto px-4 border">
 
